@@ -19,7 +19,7 @@ class App extends Component {
           (t, { i18n }) => (
             <BrowserRouter>
               <div>
-                <Route path="/" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/generator" component={Generator} />
               </div>
