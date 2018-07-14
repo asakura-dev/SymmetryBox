@@ -5,5 +5,8 @@
   "how_to_use_step1": "Load a photo.",
   "how_to_use_step1_annotation": "The photo is not upload to server.",
   "how_to_use_step2": "Generate a symmetry photo.",
-  "how_to_use_step3": "Download it."
+  "how_to_use_step3": "Download it.",
+  "about_service_title": "About the service",
+  "about_service_text": "About this service. This web service is a generator of symmetry image. All graphic processing are work on your browser and this service never upload images to our server.",
+  "about_admin_title": "Administrator"
 }
