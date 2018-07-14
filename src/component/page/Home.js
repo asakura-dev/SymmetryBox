@@ -13,7 +13,7 @@ class Home extends Component {
       <ScrollLayout>
         <Carousel/>
         <div className="start-container">
-          <Link to="generation" className="button primary">
+          <Link to="generator" className="button primary">
             {t('start_to_generate')}
           </Link>
         </div>

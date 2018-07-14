@@ -139,3 +139,77 @@ a {
   margin: -5px 0 0 0;
   font-size: 10px;
 }
+
+.generator{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.fix-size{
+  flex-grow: 0;
+}
+.variable-size{
+  flex-grow: 1;
+}
+
+.breadcrumb{
+  margin: 10px;
+  display: flex;
+}
+.breadcrumb .step{
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0 5px;
+  background: #9E9E9E;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+.breadcrumb .step:after,
+.breadcrumb .step:before{
+  top: 15px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  right: -28px;
+  z-index: 10;
+}
+.breadcrumb .step:after{
+  border-color: transparent;
+  border-width: 15px;
+  margin-top: -15px;
+  border-left-color: #9E9E9E;;
+}
+.breadcrumb .step:before{
+  border-color: transparent;
+  border-width: 14px;
+  margin-top: -14px;
+  border-left-color: #ffffff;
+}
+.breadcrumb .step.active{
+  background: #686868;
+}
+.breadcrumb .step.active:after{
+  border-left-color: #686868;
+}
+.breadcrumb .step:last-child:before,
+.breadcrumb .step:last-child:after{
+  border: none;
+}
+.breadcrumb .step-number{
+  font-size: 20px;
+  padding: 0 5px 0 0;
+}
+.breadcrumb .step-text{
+  font-size: 10px;
+  line-height: 10px;
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  justify-content: center; /* 横方向中央揃え */
+  text-align: center;
+}
