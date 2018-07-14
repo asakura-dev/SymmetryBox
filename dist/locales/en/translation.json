@@ -1,3 +1,9 @@
 {
-  "carousel-text": "Lets create symmetry photos of your precious family and animals."
+  "carousel-text": "Lets create symmetry photos of your precious family and animals.",
+  "start_to_generate": "Start to generate",
+  "how_to_use": "How to use",
+  "how_to_use_step1": "Load a photo.",
+  "how_to_use_step1_annotation": "The photo is not upload to server.",
+  "how_to_use_step2": "Generate a symmetry photo.",
+  "how_to_use_step3": "Download it."
 }

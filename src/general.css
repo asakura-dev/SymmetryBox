@@ -4,6 +4,16 @@ body{
   padding: 0;
   color: #868686;
 }
+hr{
+  border-top: 1px solid #868686;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+}
 a {
   color: #868686;
   text-decoration: none;
@@ -26,7 +36,6 @@ a {
   width: 100%;
   text-align: center;
   border-top: 1px solid #bdbdbd;
-  margin:10px 0 0 0;
 }
 
 .social-buttons{
@@ -84,5 +93,36 @@ a {
 .carousel-images img{
   width: 100%;
   height: auto;
+}
 
+.start-container{
+  padding: 20px;
+  background: #ECF7FF;
+}
+.button{
+  display: block;
+  height: 40px;
+  border-radius: 4px;
+  line-height: 40px;
+  margin: 0 5px;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+}
+.button.primary{
+  color: #fff;
+  background: #55ACEE;
+}
+.button.secondary{
+  color: #55ACEE;
+  background: #fff;
+  border: 1px solid #55ACEE;
+}
+
+.how-to-use{
+  padding: 10px;
+}
+.how-to-use .annotation{
+  margin: -5px 0 0 0;
+  font-size: 10px;
 }
