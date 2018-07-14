@@ -1,12 +1,12 @@
 import React , {Component} from 'react';
 import ReactDom from 'react-dom';
-import { I18n } from 'react-i18next';
-import './i18n';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 import { BrowserRouter, Link, Route } from 'react-router-dom'
-import Home from './component/Home';
-import About from './component/About';
-import Generator from './component/Generator';
-
+import Home from './component/page/Home';
+import About from './component/page/About';
+import Generator from './component/page/Generator';
+import './general.css';
 class App extends Component {
 
   constructor(props){
@@ -14,19 +14,15 @@ class App extends Component {
   }
   render() {
     return(
-      <I18n>
-        {
-          (t, { i18n }) => (
-            <BrowserRouter>
-              <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/generator" component={Generator} />
-              </div>
-            </BrowserRouter>
-          )
-        }
-      </I18n>
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/generator" component={Generator} />
+          </div>
+        </BrowserRouter>
+      </I18nextProvider>
     );
   }
 
