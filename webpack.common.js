@@ -14,10 +14,21 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/,
+      { 
+        test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'
+      },
+      { 
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-      }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loaders: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          publicPath : path => './js/' + path,
+        }
+      },
     ]
   }
 };

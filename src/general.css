@@ -55,3 +55,34 @@ a {
 .footer-menu{
   margin: 10px;
 }
+.carousel{
+  width: 100%;
+  height: 230px;
+  background: url("./img/carousel_bg.jpg");
+  background-size:cover;
+  position: relative;
+}
+.carousel-text{
+  position: absolute;
+  bottom: 0;
+  background:rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+  text-align: center;
+  width:100%;
+  height: 25px;
+  line-height:25px;
+  font-size: 10px;
+  color: #2271CD;
+}
+.carousel-images{
+  width: 100%;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel-images img{
+  width: 100%;
+  height: auto;
+
+}
