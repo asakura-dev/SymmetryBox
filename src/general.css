@@ -1,8 +1,9 @@
 body{
   background: #fff;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   color: #868686;
+  max-width: 400px;
 }
 hr{
   border-top: 1px solid #868686;
@@ -125,11 +126,15 @@ a {
 .button.primary{
   color: #fff;
   background: #55ACEE;
+  border: 1px solid #55ACEE;
 }
 .button.secondary{
   color: #55ACEE;
   background: #fff;
   border: 1px solid #55ACEE;
+}
+.button[disabled]{
+  opacity: 0.3;
 }
 
 .how-to-use{
@@ -150,6 +155,7 @@ a {
 }
 .variable-size{
   flex-grow: 1;
+  overflow: scroll;
 }
 
 .breadcrumb{
@@ -157,7 +163,8 @@ a {
   display: flex;
 }
 .breadcrumb .step{
-  width: 33%;
+  width: 33.3%;
+  height: 30px;
   box-sizing: border-box;
   padding: 0 5px;
   background: #9E9E9E;
@@ -212,4 +219,47 @@ a {
   align-items: center; /* 縦方向中央揃え */
   justify-content: center; /* 横方向中央揃え */
   text-align: center;
+}
+
+.action-buttons{
+  margin: 15px 0;
+  display: flex;
+  justify-content:space-around;
+}
+.action-buttons button{
+  width: 45%;
+}
+
+.load-button-container{
+  padding: 20px;
+}
+
+.image-preview canvas{
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.tab{
+  display: flex;
+  margin: 0 10px 10px 10px;
+}
+.tab .tab-item{
+  width: 50%;
+  border: 1px solid #55ACEE;
+  font-size: 10px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  color: #55ACEE;
+  background: #fff;
+}
+.tab .tab-item.active{
+  color: #fff;
+  background: #55ACEE;
+}
+.hidden{
+  display: hidden;
 }

@@ -8,5 +8,10 @@
   "how_to_use_step3": "Download it.",
   "about_service_title": "About the service",
   "about_service_text": "About this service. This web service is a generator of symmetry image. All graphic processing are work on your browser and this service never upload images to our server.",
-  "about_admin_title": "Administrator"
+  "about_admin_title": "Administrator",
+  "step-text1-top": "Load",
+  "step-text1-bottom": "Image",
+  "step-text2-top": "Generate",
+  "step-text2-bottom": "Symmetry",
+  "step-text3": "Download"
 }
