@@ -5,8 +5,10 @@ import { translate } from 'react-i18next';
 const MODE_WAIT = "MODE_WAIT";
 const MODE_SWIPE = "MODE_SWIPE";
 const MODE_SCROLL = "MODE_SCROLL";
-const THRESHOLD_RIGHT = 100;
-const THRESHOLD_LEFT = -100;
+const ENABLE_THRESHOLD_RIGHT = 100;
+const DISABLE_THRESHOLD_RIGHT = 80;
+const ENABLE_THRESHOLD_LEFT = -100;
+const DISABLE_THRESHOLD_LEFT = -80;
 class Test extends Component {
 
   constructor(props){
@@ -39,22 +41,24 @@ class Test extends Component {
     const y = event.touches[0].pageY;
     const { touchStartX, touchStartY, mode } = this.state;
     if (mode === MODE_WAIT) {
-      if (Math.abs(y-touchStartY) > 5) {
+      if (Math.abs(y-touchStartY) > 10) {
         this.setState({ mode: MODE_SCROLL });
-      }else if(Math.abs(x-touchStartX) > 5){
+      }else if(Math.abs(x-touchStartX) > 10){
         this.setState({ mode: MODE_SWIPE });
       }
     }
     if (mode === MODE_SWIPE) {
       const diffX = x - touchStartX;
-      if (diffX > THRESHOLD_RIGHT) { 
+      if (diffX > ENABLE_THRESHOLD_RIGHT) { 
         this.setState({ isSwipeRight: true });
-      }else{
+      }
+      if (diffX < DISABLE_THRESHOLD_RIGHT) {
         this.setState({ isSwipeRight: false });
       }
-      if (diffX < THRESHOLD_LEFT) {
+      if (diffX < ENABLE_THRESHOLD_LEFT) {
         this.setState({ isSwipeLeft: true });
-      }else{
+      }
+      if (diffX > DISABLE_THRESHOLD_LEFT){
         this.setState({ isSwipeLeft: false });
       }
       event.preventDefault();
