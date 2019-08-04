@@ -269,47 +269,58 @@ a {
 }
 
 .swipe-right {
-  width:120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(0, -50%);
   overflow: hidden;
 }
 .swipe-right-inner {
-  width:120px;
-  height: 120px;
+  width:80px;
+  height: 80px;
   background: rgba(234,234,234, 0.9);
   color: #5a5a5a;
   text-align: center;
-  line-height: 120px;
   animation: grow-right 0.1s ease 0s 1 alternate none running;
+  box-sizing: border-box;
+  padding: 10px 0 0 0;
+  font-size: 14px;
+}
+.swipe-right-inner img {
+  width: 30px;
 }
 
 .swipe-left {
-  width:120px;
-  height: 120px;
+  width:80px;
+  height: 80px;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  transform: translate(0, -50%);
   overflow: hidden;
 }
 
 .swipe-left-inner {
-  width:120px;
-  height: 120px;
+  width:80px;
+  height: 80px;
+  border-radius: 4px;
   background: rgba(234,234,234, 0.9);
   color: #5a5a5a;
   text-align: center;
-  line-height: 120px;
   animation: grow-left 0.1s ease 0s 1 alternate none running;
+  box-sizing: border-box;
+  padding: 10px 0 0 0;
+  font-size: 14px;
+}
+.swipe-left-inner img {
+  width: 30px;
 }
 
 @keyframes grow-right {
   0% {
-    transform: translate(-50px, 0);
+    transform: translate(-40px, 0);
   }
 
   100% {
@@ -318,7 +329,7 @@ a {
 }
 @keyframes grow-left {
   0% {
-    transform: translate(50px, 0);
+    transform: translate(40px, 0);
   }
 
   100% {

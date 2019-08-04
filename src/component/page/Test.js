@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
 import ScrollLayout from '../layout/ScrollLayout';
 import { translate } from 'react-i18next';
-
+import arrow_left from '../../img/arrow_left.png';
+import arrow_right from '../../img/arrow_right.png';
 const MODE_WAIT = "MODE_WAIT";
 const MODE_SWIPE = "MODE_SWIPE";
 const MODE_SCROLL = "MODE_SCROLL";
@@ -72,11 +73,11 @@ class Test extends Component {
     console.log(event);
     const { isSwipeRight, isSwipeLeft } = this.state;
     if (isSwipeRight) {
-      alert("次のタブ");
+      alert("前のタブ");
       this.resetState();
     }
     if (isSwipeLeft) {
-      alert("前のタブ");
+      alert("次のタブ");
       this.resetState();
     }
   }
@@ -103,14 +104,16 @@ class Test extends Component {
         { isSwipeRight && (
           <div className="swipe-right">
             <div className="swipe-right-inner">
-              次のタブ
+              前のタブ
+              <img src={arrow_left}/>
             </div>
           </div>
         )}
         { isSwipeLeft && (
           <div className="swipe-left">
             <div className="swipe-left-inner">
-              前のタブ
+              次のタブ
+              <img src={arrow_right} />
             </div>
           </div>
         )}
