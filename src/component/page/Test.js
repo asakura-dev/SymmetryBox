@@ -5,8 +5,8 @@ import { translate } from 'react-i18next';
 const MODE_WAIT = "MODE_WAIT";
 const MODE_SWIPE = "MODE_SWIPE";
 const MODE_SCROLL = "MODE_SCROLL";
-const THRESHOLD_RIGHT = 35;
-const THRESHOLD_LEFT = -35;
+const THRESHOLD_RIGHT = 100;
+const THRESHOLD_LEFT = -100;
 class Test extends Component {
 
   constructor(props){
@@ -111,6 +111,28 @@ class Test extends Component {
           </div>
         )}
         <h1>Test</h1>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
+        aaaaa<br/>
         aaaaa<br/>
         aaaaa<br/>
         aaaaa<br/>
