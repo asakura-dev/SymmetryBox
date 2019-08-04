@@ -39,9 +39,9 @@ class Test extends Component {
     const y = event.touches[0].pageY;
     const { touchStartX, touchStartY, mode } = this.state;
     if (mode === MODE_WAIT) {
-      if (Math.abs(y-touchStartY) > 0) {
+      if (Math.abs(y-touchStartY) > 5) {
         this.setState({ mode: MODE_SCROLL });
-      }else{
+      }else if(Math.abs(x-touchStartX) > 5){
         this.setState({ mode: MODE_SWIPE });
       }
     }
@@ -58,6 +58,9 @@ class Test extends Component {
         this.setState({ isSwipeLeft: false });
       }
       event.preventDefault();
+    }
+    if (mode === MODE_SCROLL) {
+      console.log("scroll");
     }
   }
 
