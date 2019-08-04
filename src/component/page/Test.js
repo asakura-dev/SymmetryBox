@@ -20,6 +20,7 @@ class Test extends Component {
       mode: null, // null, "wait", "scroll", "swipe"
       isSwipeRight: false,
       isSwipeLeft: false,
+      count: 0,
     };
   }
 
@@ -73,23 +74,22 @@ class Test extends Component {
     console.log(event);
     const { isSwipeRight, isSwipeLeft } = this.state;
     if (isSwipeRight) {
-      alert("前のタブ");
-      this.resetState();
+      this.finishSwipe(-1);
     }
     if (isSwipeLeft) {
-      alert("次のタブ");
-      this.resetState();
+      this.finishSwipe(1);
     }
   }
 
-  resetState() {
+  finishSwipe(nextIndex) {
     this.setState({
       touchStartX: 0,
       touchStartY: 0,
       mode: null,
       isSwipeRight: false,
-      isSwipeLeft: false}
-    );
+      isSwipeLeft: false,
+      count: this.state.count + nextIndex
+    });
   }
 
   preventScroll = (event) => {
@@ -98,7 +98,7 @@ class Test extends Component {
 
   render(){
     let { t } = this.props;
-    const { isSwipeRight, isSwipeLeft } = this.state;
+    const { isSwipeRight, isSwipeLeft, count } = this.state;
     return(
       <ScrollLayout>
         { isSwipeRight && (
@@ -117,7 +117,7 @@ class Test extends Component {
             </div>
           </div>
         )}
-        <h1>Test</h1>
+        <h1>Test: {count}</h1>
         aaaaa<br/>
         aaaaa<br/>
         aaaaa<br/>

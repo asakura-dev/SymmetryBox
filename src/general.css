@@ -281,7 +281,7 @@ a {
   width:80px;
   height: 80px;
   border-radius: 0 8px 8px 0;
-  background: rgba(234,234,234, 0.9);
+  background: rgba(234,234,234, 0.8);
   color: #5a5a5a;
   text-align: center;
   animation: grow-right 0.1s ease-in-out 0s 1 alternate none running;
@@ -307,7 +307,7 @@ a {
   width:80px;
   height: 80px;
   border-radius: 8px 0  0 8px;
-  background: rgba(234,234,234, 0.9);
+  background: rgba(234,234,234, 0.8);
   color: #5a5a5a;
   text-align: center;
   animation: grow-left 0.1s ease-in-out 0s 1 alternate none running;
