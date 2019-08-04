@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom'
 import Home from './component/page/Home';
 import About from './component/page/About';
 import Generator from './component/page/Generator';
+import Test from './component/page/Test';
 import './general.css';
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/generator" component={Generator} />
+            <Route path="/test" component={Test} />
           </div>
         </BrowserRouter>
       </I18nextProvider>

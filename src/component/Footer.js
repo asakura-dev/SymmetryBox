@@ -9,8 +9,9 @@ const Footer = () => {
       <SocialButtons/>
       <LanguageSelector/>
       <div className="footer-menu">
-        <Link to='/'>Top  </Link>
-        <Link to='about'>About</Link>
+        <Link to='/'>TOP  </Link>
+        <Link to='about'>ABOUT</Link>
+        <Link to='Test'>Test</Link>
       </div>
     </div>
   );

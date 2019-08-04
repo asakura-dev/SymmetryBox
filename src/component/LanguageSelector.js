@@ -13,7 +13,7 @@ class LanguageSelector extends Component{
     let lang = this.props.i18n.language;
     return(
       <div className='language-selector'>
-      Language :
+      {"Language "}
       <select name='language' onChange={this.handleChange} value={lang}>
         <option value='ja'>日本語</option>
         <option value='en'>English</option>

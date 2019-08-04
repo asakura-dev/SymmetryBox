@@ -7,12 +7,11 @@ class About extends Component {
     return(
       <ScrollLayout>
         <h1>About</h1>
-        <hr/>
         <h2>{t('about_service_title')}</h2>
         <p>{t('about_service_text')}</p>
         <h2>{t('about_admin_title')}</h2>
         <p><a target = "_blank" href="https://twitter.com/asakura_dev">asakura_dev</a></p>
-        <h2>Code</h2>
+        <h2>Github</h2>
         <p><a target = "_blank" href="https://github.com/asakura-dev/SymmetryBox">asakura-dev/SymmetryBox</a></p>
       </ScrollLayout>
     );

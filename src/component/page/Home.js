@@ -19,7 +19,6 @@ class Home extends Component {
         </div>
         <div className="how-to-use">
           <h1>{t('how_to_use')}</h1>
-          <hr/>
           <ol>
             <li>
               {t('how_to_use_step1')}

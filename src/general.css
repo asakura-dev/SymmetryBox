@@ -13,8 +13,9 @@ hr{
 h1{
   font-size: 20px;
   font-weight: normal;
-  padding: 0 10px;
+  padding: 10px;
   margin:0;
+  background: #fafafa;
 }
 h2{
   font-size: 16px;
@@ -44,6 +45,9 @@ a {
   color: #868686;
   font-size: 16px;
   text-decoration: none;
+  height: 40px;
+  width: 100%;
+  display: block;
 }
 
 .footer{
@@ -262,4 +266,62 @@ a {
 }
 .hidden{
   display: hidden;
+}
+
+.swipe-right {
+  width:120px;
+  height: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.swipe-right-inner {
+  width:120px;
+  height: 120px;
+  background: rgba(234,234,234, 0.9);
+  color: #5a5a5a;
+  text-align: center;
+  line-height: 120px;
+  animation: grow-right 0.1s ease 0s 1 alternate none running;
+}
+
+.swipe-left {
+  width:120px;
+  height: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.swipe-left-inner {
+  width:120px;
+  height: 120px;
+  background: rgba(234,234,234, 0.9);
+  color: #5a5a5a;
+  text-align: center;
+  line-height: 120px;
+  animation: grow-left 0.1s ease 0s 1 alternate none running;
+}
+
+@keyframes grow-right {
+  0% {
+    transform: translate(-50px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes grow-left {
+  0% {
+    transform: translate(50px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
